@@ -28,7 +28,8 @@ module.exports = function(grunt) {
 
         copy: {
             js: {
-                src: 'autocomplete.js',
+                cwd: 'src',
+                src: '*.js',
                 dest: 'dist',
                 expand: true
             }
@@ -52,5 +53,5 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('test', ['jshint', 'jscs']);
-    grunt.registerTask('default', ['test', 'copy', 'uglify']);
+    grunt.registerTask('default', ['test', 'clean', 'copy', 'uglify']);
 };
