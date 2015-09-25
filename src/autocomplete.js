@@ -13,7 +13,7 @@
                     type: 'ajax-fetch.wb',
                     element: event.delegateTarget,
                     fetch: {
-                        url: 'http://localhost:5023/api/3/action/GetAutocomplete?type=' + type + '&q=' + val,
+                        url: '/api/3/action/GetAutocomplete?type=' + type + '&q=' + val,
                         dataType: 'jsonp',
                         jsonp: 'callback'
                     }
@@ -47,7 +47,7 @@
     });
 
     $('[data-autocomplete]').on('click', 'button', function(event) {
-        var $codes = $(event.delegateTarget).find('input[name]'),
+        var $codes = $(event.delegateTarget).find('input[name!=""][name]'),
             codes = $codes.val(),
             code = $(event.delegateTarget).find('select option:selected').val();
 
