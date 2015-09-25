@@ -1,0 +1,9 @@
+{
+    "preset": "node-style-guide",
+    "validateIndentation": 4,
+    "requireTrailingComma": null,
+    "disallowMultipleVarDecl": null,
+    "requireMultipleVarDecl": true,
+    "maximumLineLength": 500,
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties"
+}
