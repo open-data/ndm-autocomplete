@@ -39,10 +39,14 @@
 
         $select.empty();
 
-        for (t = 0; t < termsLength; t += 1) {
-            term = terms[t];
+        if (terms.length !== 0) {
+            for (t = 0; t < termsLength; t += 1) {
+                term = terms[t];
 
-            $select.append('<option value="' + term.code + '">' + term.title.en + ' | ' + term.title.fr + ' | ' + term.code);
+                $select.append('<option value="' + term.code + '">' + term.title.en + ' | ' + term.title.fr + ' | ' + term.code);
+            }
+        } else {
+            $select.append('<option value="">' + wb.i18n('no-match') + '</option>');
         }
     });
 
