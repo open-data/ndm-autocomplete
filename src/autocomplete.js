@@ -2,6 +2,7 @@
     'use strict';
 
     var timeout,
+        root = window.ckan ? window.ckan.root : '',
         getAutocomplete = function(event) {
             var val = event.target.value,
                 type;
@@ -13,7 +14,7 @@
                     type: 'ajax-fetch.wb',
                     element: event.delegateTarget,
                     fetch: {
-                        url: '/api/3/action/GetAutocomplete?type=' + type + '&q=*' + val + '*',
+                        url: root + '/api/3/action/GetAutocomplete?type=' + type + '&q=*' + val + '*',
                         dataType: 'jsonp',
                         jsonp: 'callback'
                     }
