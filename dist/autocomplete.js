@@ -2,7 +2,7 @@
     'use strict';
 
     var timeout,
-        root = window.ckan ? window.ckan.root : '',
+        root = $('body').data('siteRoot'),
         getAutocomplete = function(event) {
             var val = event.target.value,
                 type;
