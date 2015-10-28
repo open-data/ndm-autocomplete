@@ -22,7 +22,7 @@
             }
         };
 
-    $('[data-autocomplete]').on('keydown', 'input[type="text"]', function() {
+    $('[data-autocomplete]').on('keydown', 'input[type="text"]:first', function() {
         var _this = this,
             args = arguments;
 
